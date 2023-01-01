@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %} Create Post {% endblock %}
+
+{% block body %}
+
+<div style="text-align: center;" class="main-container">
+    <form method="POST">
+        Title: <input value={{ post[0] }} type="text" name="title">
+       <hr>
+       Content:
+       <br>
+       <textarea name="content">{{ post[1] }}</textarea>
+       <hr>
+       <button type="submit">
+             POST
+        </button>
+    </form>
+</div>
+
+{% endblock %}

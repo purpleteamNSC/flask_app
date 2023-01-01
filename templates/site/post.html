@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %} Posts {% endblock %}
+
+{% block body %}
+
+<div class="main-container">
+    <h1>{{ post[0] }}</h1>
+    <div> posted on:{{ post[2] }}</div>
+    <div>{{ post[1] }}</div>
+    <hr>
+    <a style="text-decoration: none; color: red;" href="{{ url_for('delete_post', post_id=post_id) }}">DELETE</a>
+    <a style="text-decoration: none; color: red;" href="{{ url_for('edit_post', post_id=post_id) }}">EDITAR</a>
+</div>
+
+{% endblock %}
